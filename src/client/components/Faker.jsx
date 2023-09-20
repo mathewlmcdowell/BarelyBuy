@@ -1,3 +1,5 @@
+import {faker} from '@faker-js/faker';
+
 export default function Faker() {
 
     const data = [];
