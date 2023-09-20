@@ -1,15 +1,26 @@
-import { useState } from 'react'
-import { Routes, Route, Link } from 'react-router-dom'
-import Login from './components/Login'
+import React, { useState } from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
+import Card from './components/Card';
+import {faker} from '@faker-js/faker';
 
-function App() {
-  const [count, setCount] = useState(0);
- 
+export default function Faker() {
+  const data = [];
+
+  for(let i = 0; i < 50; i++) {
+    let fakee = {
+      id: i, 
+      product_name: faker.commerce.product(),
+      price: faker.commerce.price(),
+    };
+    data.push(fakee);
+  }
+
   return (
-    <div className='App'>
-      <h1>Help</h1>
+    <div className="card-container">
+      <h1>Faker</h1>
+      {data.map((product) => (
+        <Card key={product.id} product={product} />
+      ))}
     </div>
   );
 }
-
-export default App;
