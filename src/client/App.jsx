@@ -5,16 +5,12 @@ import Home from './components/Home'
 import Faker from './components/Faker'
 
 function App() {
-  const [count, setCount] = useState(0);
  
   return (
     <>
-    <div>
-      <Faker />
-    </div>
       <div>
         <Routes>
-          <Route path ='/' element={<Home />} />
+          <Route path ='/' element={<Faker />} />
         </Routes>
       </div>
     </>
