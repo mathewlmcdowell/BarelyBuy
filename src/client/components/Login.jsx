@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 
+
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
+
+
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -26,6 +29,13 @@ const Login = () => {
             })
         });
         const result = await response.json();
+
+        console.log(result?.data?.token);
+        console.log(result);
+        sessionStorage.setItem('token', result.data.token )
+         sessionStorage.getItem('token', result.data.token)  
+            navigate('/');
+            
         setMessage(result.message);
         if(!response.ok) {
           throw(result)
