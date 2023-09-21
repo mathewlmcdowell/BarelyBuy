@@ -5,8 +5,8 @@ import Home from './components/Home'
 import Faker from './components/Faker'
 import Card from './components/Card'
 
-function App() {
- 
+export default function App(){
+
   return (
     <>
       <div>
@@ -17,5 +17,3 @@ function App() {
     </>
   );
 }
-
-export default App;
