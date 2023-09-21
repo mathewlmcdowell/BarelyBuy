@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Card({ product, onAddToCart }) {
+export default function Card({ product, onAddToCart }) {
   const handleAddToCart = () => {
     // You can perform actions here when the button is clicked
     // For example, you can add the product to the cart
@@ -25,5 +25,3 @@ Card.propTypes = {
   }).isRequired,
   onAddToCart: PropTypes.func.isRequired, // Callback function for adding to cart
 };
-
-export default Card;
