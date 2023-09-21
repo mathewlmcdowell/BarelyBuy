@@ -1,11 +1,10 @@
+
 import { useState } from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
 import Login from './components/Login'
 import Home from './components/Home'
 
-function App() {
-  const [count, setCount] = useState(0);
- 
+
   return (
     <>
       <div>
@@ -16,5 +15,3 @@ function App() {
     </>
   );
 }
-
-export default App;
