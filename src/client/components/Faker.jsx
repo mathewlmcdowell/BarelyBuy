@@ -1,5 +1,5 @@
 
-import Card from './components/Card';
+import Card from './Card';
 import {faker} from '@faker-js/faker';
 
 export default function Faker() {
