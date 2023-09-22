@@ -21,6 +21,8 @@
   justify-content: center; /* Center align cards horizontally */
   color: whitesmoke; /* Set font color to purple */
   padding: 4rem 2rem; /* Add some padding to the container */
+  width: 70%;
+  margin-left: 10%;
 }
 
 .card {
@@ -32,8 +34,8 @@
   border: 1px solid #ccc;
   padding: 1rem;
   margin: 1rem;
-  min-width: 10em;
-  max-width: 10em;
+  min-width: 50em;
+  max-width: 50em;
   box-sizing: border-box; /* Ensure padding and border are included in width */
 }
 
