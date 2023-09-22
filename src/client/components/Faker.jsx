@@ -15,7 +15,7 @@ export default function Faker() {
   }
 
   return (
-    <div className="card-container">
+    <div className="card-container outline">
       {data.map((product) => (
         <Card key={product.id} product={product} />
       ))}
