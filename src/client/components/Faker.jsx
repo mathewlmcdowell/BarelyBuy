@@ -16,7 +16,6 @@ export default function Faker() {
 
   return (
     <div className="card-container">
-      <h1>Faker</h1>
       {data.map((product) => (
         <Card key={product.id} product={product} />
       ))}

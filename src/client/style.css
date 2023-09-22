@@ -20,7 +20,7 @@
   flex-wrap: wrap; /* Allow cards to wrap to the next row */
   justify-content: center; /* Center align cards horizontally */
   color: whitesmoke; /* Set font color to purple */
-  padding: 20px; /* Add some padding to the container */
+  padding: 4rem 2rem; /* Add some padding to the container */
 }
 
 .card {
@@ -52,3 +52,43 @@ body{
     margin: 1rem 1rem;
   }
 
+.NavBar {
+  position:fixed;
+  background-image: url(./components/PaintedBackground.jpg);
+  border-bottom: .8rem double rgb(255, 255, 0);
+  width: 100%;
+  height: 3rem;
+  margin: auto;
+  padding: auto;
+  display:block;
+}
+
+.navButton {
+  font-size: small;
+  margin: 1em 1em;
+  padding: auto;
+  text-decoration: none;
+  color: whitesmoke;
+  border:solid #ccc;
+  background-color: #cccccc00;
+  display: inline;
+  min-width: fit-content;
+  min-height: fit-content;
+}
+
+.title {
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  display: inline;
+}
+
+.outline {
+  text-shadow:
+    -1px -1px 0 #00000079,
+    1px -1px 0 #00000079,
+    -1px 1px 0 #00000079,
+    1px 1px 0 #00000079;  
+  color: whitesmoke;
+  }
+  

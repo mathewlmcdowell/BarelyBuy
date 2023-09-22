@@ -1,10 +1,16 @@
 import Faker from "./Faker"
+import NavBar from "./NavBar"
 
 export default function Home() {
 
     return(
         <>
-        <Faker />
+        <div>
+            <NavBar />
+        </div>
+        <div>
+            <Faker />
+        </div>
         </>
     )
 }
