@@ -1,26 +1,19 @@
-import React, { useState } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
-import Card from './components/Card';
-import {faker} from '@faker-js/faker';
+import { useState } from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import Home from "./components/Home";
+import './style.css'
+import Login from "./components/Login";
 
-export default function Faker() {
-  const data = [];
+export default function App() {
 
-  for(let i = 0; i < 50; i++) {
-    let fakee = {
-      id: i, 
-      product_name: faker.commerce.product(),
-      price: faker.commerce.price(),
-    };
-    data.push(fakee);
-  }
-
-  return (
-    <div className="card-container">
-      <h1>Faker</h1>
-      {data.map((product) => (
-        <Card key={product.id} product={product} />
-      ))}
+  return(
+    <>
+    <div>
+      <Routes>
+        <Route path ='/' element={<Home />} />
+        <Route path ='/Login' element={<Login />} />
+      </Routes>
     </div>
-  );
+    </>
+  )
 }
