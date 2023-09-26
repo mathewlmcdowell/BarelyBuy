@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
-import Login from './components/Login'
 import Home from './components/Home'
-import Faker from './components/Faker'
-import Card from './components/Card'
+import './style.css'
+import Login from './components/Login';
 
 export default function App(){
 
@@ -11,7 +10,8 @@ export default function App(){
     <>
       <div>
         <Routes>
-          <Route path ='/' element={<Faker />} />
+          <Route path ='/' element={<Home />} />
+          <Route path ='/Login' element={<Login />} />
         </Routes>
       </div>
     </>

@@ -1,8 +1,16 @@
+import Faker from "./Faker"
+import NavBar from "./NavBar"
+
 export default function Home() {
 
     return(
         <>
-        <h1>Help Please</h1>
+        <div>
+            <NavBar />
+        </div>
+        <div>
+            <Faker />
+        </div>
         </>
     )
 }

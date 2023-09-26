@@ -43,7 +43,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className='outline'>
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <div>

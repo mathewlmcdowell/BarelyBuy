@@ -10,10 +10,10 @@ export default function Card({ product, onAddToCart }) {
   };
 
   return (
-    <div className="card">
+    <div className="card outline">
       <h2>{product.product_name}</h2>
       <p>Price: {product.price}</p>
-      <button onClick={handleAddToCart}>Add Item to Cart</button>
+      <button onClick={handleAddToCart} className='addCart'>Add to Cart</button>
     </div>
   );
 }
