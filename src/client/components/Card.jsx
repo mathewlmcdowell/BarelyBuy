@@ -27,3 +27,4 @@ Card.propTypes = {
   onAddToCart: PropTypes.func.isRequired, // Callback function for adding to cart
 };
 
+export default Card;
