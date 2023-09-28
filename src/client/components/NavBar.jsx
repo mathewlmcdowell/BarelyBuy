@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-import Login from './Login'
 
 export default function NavBar() {
 
@@ -12,10 +11,9 @@ export default function NavBar() {
             </div>
             <div>
                 <Link to = '/Login' className='navButton'>Login</Link>
+                <Link to = '/Register' className="navButton">Register</Link>
             </div>
-            <h1 className="title">barely buy</h1>
-
-
+            <Link to = '/' className="title">barely buy</Link>
         </div>
         </>
     )
