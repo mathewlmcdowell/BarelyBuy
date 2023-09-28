@@ -7,6 +7,7 @@ export default function Faker() {
   const data = [];
   const [selectedProduct, setSelectedProduct] = useState(null); // Initialize selected product state
 
+  
   for(let i = 0; i < 50; i++) {
     const minPrice = 8;
     const maxPrice = 20;

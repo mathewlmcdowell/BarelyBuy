@@ -13,13 +13,12 @@ export default function Home({ onSearch }) {
   
     const handleProductClick = (product) => {
         setSelectedProduct(product);
-        console.log("i've gone off")
       };
     
       // Function to filter products based on search text
       const filterProducts = (products, text) => {
         return products.filter((product) =>
-          product.product_name.toLowerCase().includes(text.toLowerCase())
+          product.product_name.toLowerCase().includes(text.toLowerCase()),
         );
       };
     
