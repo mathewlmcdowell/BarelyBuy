@@ -82,6 +82,8 @@ body{
   color: whitesmoke;
   display: inline;
   padding-left: 1%;
+  font-size:xx-large;
+  text-decoration: none;
 }
 
 .outline {
@@ -93,3 +95,16 @@ body{
   color: whitesmoke;
   }
   
+  .searchBar {
+    display:block;
+    position:fixed;
+    z-index: 99;
+    margin-left: 43%;
+    width: 15%;
+    margin-top: 2.8%;
+  }
+
+  .padding {
+    padding: 4rem 2rem;
+    height: 100vh;
+  }

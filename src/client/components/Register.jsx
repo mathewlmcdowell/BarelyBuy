@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
+import NavBar from "./NavBar";
 
 
 export default function Register () {
@@ -59,6 +60,9 @@ export default function Register () {
 return(
     <>
     <div>
+      <NavBar />
+    </div>
+    <div className="padding">
 <h2>Don't have an account? Sign Up</h2>
  <form
  method="POST"
