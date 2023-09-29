@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 export default function Card({ product, onAddToCart }) {
-
   const handleAddToCart = () => {
     // You can perform actions here when the button is clicked
     // For example, you can add the product to the cart
@@ -10,10 +10,10 @@ export default function Card({ product, onAddToCart }) {
   };
 
   return (
-    <div className="card">
+    <div className="card outline">
       <h2>{product.product_name}</h2>
       <p>Price: {product.price}</p>
-      <button onClick={handleAddToCart}>Add Item to Cart</button>
+      <button onClick={handleAddToCart} className='addCart'>Add to Cart</button>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import NavBar from './NavBar';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -43,7 +44,11 @@ const Login = () => {
   };
 
   return (
+    <>
     <div>
+      <NavBar />
+    </div>
+    <div className='outline padding'>
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <div>
@@ -70,6 +75,7 @@ const Login = () => {
       </form>
       <p>{message}</p>
     </div>
+    </>
   );
 };
 
