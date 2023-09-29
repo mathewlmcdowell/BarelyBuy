@@ -5,7 +5,6 @@ import Card from './Card';
 export default function SearchBar({ onSearch }) {
   const [searchText, setSearchText] = useState('');
 
-
   const handleSearchChange = (e) => {
     const text = e.target.value;
     setSearchText(text);

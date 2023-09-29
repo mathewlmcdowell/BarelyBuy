@@ -1,12 +1,13 @@
 import Card from './Card';
 import {faker} from '@faker-js/faker';
 import { useState } from 'react';
+import Cart from './Cart';
 
 
 export default function Faker() {
   const data = [];
   const [selectedProduct, setSelectedProduct] = useState(null); // Initialize selected product state
-
+  
   
   for(let i = 0; i < 50; i++) {
     const minPrice = 8;
@@ -26,18 +27,13 @@ export default function Faker() {
     setSelectedProduct(product);
   };
 
-  const handleAddToCart = (product) => {
-    // Implement your logic to add the product to the cart here
-    console.log(`Added ${product.product_name} to the cart`);
-  };
-
 
   return (
     <>
     <div className="card-container outline">
       {data.map((product) => (
         <div key={product.id} onClick={() => handleProductClick(product)}>
-          <Card product={product} onAddToCart={handleAddToCart} />
+          <Card product={product} />
         </div>
       ))}
 

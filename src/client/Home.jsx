@@ -1,12 +1,13 @@
-import Faker from "./Faker"
-import NavBar from "./NavBar"
-import SearchBar from "./SearchBar"
+import Faker from "./components/Faker"
+import NavBar from "./components/NavBar"
+import SearchBar from "./components/SearchBar"
 import { useState } from "react"
-import ProductDetail from "./ProductDetail"
-import Card from "./Card"
+import ProductDetail from "./components/ProductDetail"
+import Card from "./components/Card"
 
 
-export default function Home({ onSearch }) {
+export default function Home() {
+
     const [selectedProduct, setSelectedProduct] = useState(null);
     const [searchText, setSearchText] = useState(''); // State for search text
     const data = [];
@@ -30,6 +31,7 @@ export default function Home({ onSearch }) {
       // Filter the products based on the search text
       const filteredProducts = filterProducts(data, searchText);
     
+    
 
     return(
         <>
@@ -37,17 +39,18 @@ export default function Home({ onSearch }) {
             <NavBar />
         </div>
         <div>
-            <SearchBar onSearch={handleSearch} /> {/* Add the SearchBar component */}
+          <SearchBar onSearch={handleSearch} /> {/* Add the SearchBar component */}
             {filteredProducts.map((product) => (
             <div key={product.id} onClick={() => handleProductClick(product)}>
-                <Card product={product} />
+              <Card product={product} />
             </div>
             ))}
+            { (selectedProduct && <ProductDetail product={selectedProduct} />) }
         </div>
         <div>   
             <Faker />
         </div>
-        { (selectedProduct && <ProductDetail product={selectedProduct} />) }
+        
         </>
     )
 }
