@@ -10,11 +10,10 @@ export default function NavBar() {
             <div>
                 <Link to = '/Login' className='navButton'>Login</Link>
                 <Link to = '/Register' className="navButton">Register</Link>
+                <Link to = '/Cart' className="cartButton">Cart</Link>
             </div>
             <Link to = '/' className="title">barely buy</Link>
-            <div>
-                <Link to = '/Cart' className="navButton">Cart</Link>
-            </div>
+
         </div>
         </>
     )
