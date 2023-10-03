@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom"
-
+import React from 'react'
+import '../styles/NavBar.css'
+import '../styles/Buttons.css'
+import '../styles/Title.css'
+import '../styles/Outline.css'
+import Header from "./Header"
 
 export default function NavBar() {
 
@@ -15,6 +20,7 @@ export default function NavBar() {
             <Link to = '/' className="title">barely buy</Link>
 
         </div>
+        <div><Header></Header></div>
         </>
     )
 } 
