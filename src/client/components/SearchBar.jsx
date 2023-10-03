@@ -22,7 +22,7 @@ export default function SearchBar({ onSearch }) {
 
   return (
     <>
-    <div className='outline searchBar'>
+    <div className='outline searchBarDiv'>
       <input
         type="text"
         onKeyDown={handleKeyDown}

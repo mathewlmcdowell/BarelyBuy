@@ -76,12 +76,19 @@ body{
   min-height: fit-content;
 }
 
+.cartButton {
+    display: flexbox;
+    margin: 80vw;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
 .title {
   justify-content: center;
   align-items: center;
   color: whitesmoke;
   display: inline;
-  padding-left: 1%;
+  margin-left: 20vw;
   font-size:xx-large;
   text-decoration: none;
 }
@@ -95,7 +102,7 @@ body{
   color: whitesmoke;
   }
   
-  .searchBar {
+  .searchBarDiv {
     display:block;
     position:fixed;
     z-index: 99;
@@ -108,3 +115,5 @@ body{
     padding: 4rem 2rem;
     height: 100vh;
   }
+
+ 
