@@ -1,23 +1,24 @@
-// SearchBar.jsx
 import React, { useState } from 'react';
 
-export default function SearchBar({ onSearch }) {
-  const [searchText, setSearchText] = useState('');
+const Search = ({ onSearch }) => {
+  const [query, setQuery] = useState('');
 
-  const handleSearchChange = (e) => {
-    const text = e.target.value;
-    setSearchText(text);
-    onSearch(text); // Pass the search text to the parent component
+  const handleSearch = (e) => {
+    e.preventDefault();
+    onSearch(query);
   };
 
   return (
-    <div>
+    <form onSubmit={handleSearch}>
       <input
         type="text"
-        placeholder="Search inventory..."
-        value={searchText}
-        onChange={handleSearchChange}
+        placeholder="Search..."
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
       />
-    </div>
+      <button type="submit">Search</button>
+    </form>
   );
-}
+};
+
+export default Search;
