@@ -5,7 +5,6 @@ import Card from './Card';
 export default function SearchBar({ onSearch }) {
   const [searchText, setSearchText] = useState('');
 
-
   const handleSearchChange = (e) => {
     const text = e.target.value;
     setSearchText(text);
@@ -23,7 +22,7 @@ export default function SearchBar({ onSearch }) {
 
   return (
     <>
-    <div className='outline searchBar'>
+    <div className='outline searchBarDiv'>
       <input
         type="text"
         onKeyDown={handleKeyDown}

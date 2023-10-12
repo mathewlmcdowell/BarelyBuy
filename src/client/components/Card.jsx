@@ -1,13 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-export default function Card({ product, onAddToCart }) {
-  const handleAddToCart = () => {
-    // You can perform actions here when the button is clicked
-    // For example, you can add the product to the cart
-    onAddToCart(product);
-  };
+export default function Card({ product }) {
+
+  const [cartItems, setCartItems] = useState(null);
+
+  const handleAddToCart = (product) => { 
+    console.log(`Added ${product.product_name} to the cart`);
+    setCartItems(product);
+    console.log(cartItems);
+    };
+
 
   return (
     <div className="card outline">
